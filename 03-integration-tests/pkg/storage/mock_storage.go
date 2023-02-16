@@ -1,5 +1,7 @@
 package storage
 
+import "fmt"
+
 type mockStorage struct {
 	Data map[string] interface{}
 	Err error
@@ -17,7 +19,9 @@ func (storage *mockStorage) GetValue(key string) interface{} {
 	if val := storage.Data[key]; val != nil{
 		return val
 	}
+	fmt.Println("Holi :)")
 	return nil
+	
 }
 
 
