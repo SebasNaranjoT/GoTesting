@@ -54,6 +54,7 @@ func TestConfigureShark(t *testing.T){
 		server := createServer()
 		req, res := createRequestTest(http.MethodPut, "/v1/shark",
 		`{"x_position": 5.0, "y_position": 5.0, "speed": 5.0}`)
+		
 		expectedResponse := response{
 			Success: true,
 			Data: request{
